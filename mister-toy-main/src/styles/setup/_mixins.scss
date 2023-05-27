@@ -1,0 +1,75 @@
+// so we have a mixin called blockBtn with parameters of beColor that defaults to dray etc..,
+
+
+@mixin btn($type: regular, $bg: $clr1, $clr: $clr3, $padding: em(10px) em(20px), $hover: darken($bg, 8%)) {
+  display: block;
+ text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: $padding;
+  line-height: 1.25;
+  font-size: em(14px);
+  font-variation-settings: "wght" 430;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  @if $type == regular {
+    background-color: $bg;
+    color: $clr;
+    width: rem(80px);
+    &:hover {
+      background-color: $hover;
+    }
+  } @else if $type == dark {
+    background-color: $clr2;
+    color: $clr3;
+    &:hover {
+      background-color: $clr1;
+      color: $clr3;
+    }
+  } @else if($type==round) {
+    background-color: $clr4;
+    border-radius: 2em;
+    &:hover{
+      background-color: darken($clr1, 9%)
+    }
+  }
+  
+  @else if $type == light {
+    background-color: $clr3;
+    color: $clr2;
+    &:hover {
+      background-color: $clr1;
+      color: $clr3;
+    }
+  }
+}
+
+//grid template columns
+@mixin mainLayoutGTC($width:600px){
+  grid-template-columns:
+  minmax($layoutPadding, 1fr)
+  minmax(auto, $width)
+  minmax($layoutPadding, 1fr);
+}
+
+//content means: take the include (what is in the include scope) and put it here
+@mixin for-narrow-layout {
+  @media (min-width: $padded-break-narrow){
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $padded-break-normal){
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $padded-break-wide){
+    @content;
+  }
+}

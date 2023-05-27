@@ -1,0 +1,26 @@
+.main-layout {
+  display: grid;
+  grid-template-columns: $layoutPadding 1fr $layoutPadding; // this is mobile first: small shulaim on the side and the rest of the content in the middle
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  > * {
+    &.full {
+      grid-column: 1/-1;
+    }
+    &:not(.full) {
+      grid-column: 2;
+    }
+  }
+
+  @include for-narrow-layout {
+    @include mainLayoutGTC($break-narrow);
+  }
+
+  @include for-normal-layout {
+    @include mainLayoutGTC($break-normal);
+  }
+
+  @include for-wide-layout {
+    @include mainLayoutGTC($break-wide);
+  }
+}

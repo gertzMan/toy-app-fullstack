@@ -1,0 +1,25 @@
+.toy-preview{
+
+    box-shadow: 0 0 0 1px $clr1;
+    display: grid;
+    border: 1px solid $clr1;
+    justify-items: center;
+
+    img{
+        object-fit: contain;
+    }
+
+    h4 {
+        font-size: em(16px);
+        color: $clr5;
+        text-transform: uppercase;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(10px);
+        padding: em(10px) em(20px);
+    }
+}

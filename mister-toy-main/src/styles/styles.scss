@@ -1,0 +1,19 @@
+// SETUP
+
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+// BASICS
+
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+// COMPONENTS
+@import 'components/toy-list';
+@import 'components/toy-preview';
+@import 'components/toy-filter';
+@import 'components/main-footer';
+@import 'components/main-header';

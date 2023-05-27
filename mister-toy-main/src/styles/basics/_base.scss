@@ -1,0 +1,76 @@
+::selection {
+  background-color: $clr3;
+  color: $clr5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html { 
+  font-family: Montserrat, sans-serif; 
+  color: $clr1;
+  line-height: lh(26px);
+}
+
+body {
+  margin: 0;
+  background-color: $clr3;
+  font-family: Montserrat;  
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0 0 1rem;
+  line-height: lh(40px, 29px);
+}
+
+h1 {
+  font-size: rem(60px);
+}
+
+h2 {
+  font-size: em(16px);
+  margin: em(63px) 0;
+  color: $clr1;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: em(29px);
+}
+
+//using the btn mixin: so include "spills" the the content of the blockBtn mixin
+
+.btn {
+  @include btn;
+  
+  &-dark {
+      @include btn($type: dark);
+  }
+  
+  &-light {
+      @include btn($type: light);
+  }
+
+  &-round {
+    @include btn($type: round)
+  }
+}
+
+
+
+// links
+a {
+  color: $clr1;
+  text-decoration: none;
+
+  &.active {
+      background-color: $clr4;
+      font-weight: bold;
+      color: $clr3;
+  }
+}

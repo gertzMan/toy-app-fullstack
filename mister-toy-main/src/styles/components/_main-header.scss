@@ -1,0 +1,21 @@
+header.main-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: rem(10px) rem(20px);
+   background-color: $clr2; 
+
+   nav{
+      font-size: rem(20px);
+      display: flex;
+      gap:rem(20px);
+   }
+
+   .logo{
+      font-size: rem(30px);
+      font-weight: bold;
+      color: $clr5;
+      text-transform: uppercase;
+      text-decoration: none;
+   }
+}

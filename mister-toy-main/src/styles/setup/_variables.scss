@@ -1,0 +1,20 @@
+// COLOR PALETTE
+$clr1: #0fa3b1;
+$clr2: #b5e2fa;
+$clr3: #f9f7f3;
+$clr4: #eddea4;
+$clr5: #f7a072;
+
+
+// LAYOUT
+$layoutPadding: 20px; // this is the the padding given to the main-layout - meaning the space in either side of the main column
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 600px;
+$break-normal: 860px;
+$break-wide: 1200px;
+
+//we use this to break at the padding of each break point and not at the content itself
+$padded-break-narrow: $break-narrow + $layoutPadding * 2; 
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
