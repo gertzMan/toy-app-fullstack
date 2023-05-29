@@ -19,18 +19,23 @@ export function LabelSelector({ labels, onLabelChange }) {
 
     return (
         <div className="label-selector">
-            {labels.map(label => (
-                <div key={label}>
-                    <input
-                        type="checkbox"
-                        value={label}
-                        checked={selectedLabels.includes(label)}
-                        onChange={handleLabelChange}
-                    />
-                    {label}
-                </div>
-            ))}
+            <p>hi</p>
         </div>
+
+
     )
 }
 
+// <div className="label-selector">
+//         {{labels.length && labels.map(label => (
+//             <div key={label}>
+//                 <input
+//                     type="checkbox"
+//                     value={label}
+//                     checked={selectedLabels.includes(label)}
+//                     onChange={handleLabelChange}
+//                 />
+//                 {label}
+//             </div>
+//         ))}}
+//         </div>

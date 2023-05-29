@@ -12,12 +12,12 @@ export function ToyList({ toys, onRemoveToy }) {
             <button
               className="btn-round"
               onClick={() => {
-                onRemoveToy(toy._id) 
+                onRemoveToy(toy._id)
               }}
             >
               remove
             </button>
-              
+
           </div>
         </li>
       ))}

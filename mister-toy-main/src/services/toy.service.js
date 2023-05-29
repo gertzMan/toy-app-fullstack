@@ -3,7 +3,7 @@ import { utilService } from './util.service.js'
 // import { userService } from './user.service.js'
 import { httpService } from './http.service.js'
 
-const STORAGE_KEY = 'toyDB'
+const STORAGE_KEY = 'toy_DB'
 const BASE_URL = 'toy/'
 
 export const toyService = {
@@ -16,7 +16,7 @@ export const toyService = {
   getLabelMap,
 }
 
-function query(filterBy = {},sortBy = {}) {
+function query(filterBy = {}, sortBy = {}) {
   return httpService.get(BASE_URL, filterBy)
   // return storageService.query(STORAGE_KEY).then(toys => toys)
 }
@@ -26,7 +26,7 @@ function getById(toyId) {
 }
 function remove(toyId) {
   // return storageService.remove(STORAGE_KEY, toyId)
-  return httpService.delete(BASE_URL + toyId)  
+  return httpService.delete(BASE_URL + toyId)
 }
 function save(toy) {
   const method = toy._id ? 'put' : 'post'
@@ -56,7 +56,7 @@ function getEmptyToy() {
 
 function getDefaultFilter() {
   // return { txt: '', maxPrice: '', status: '', labels: [] }
-  return { name: '', maxPrice: '', labels: []}
+  return { name: '', maxPrice: '', labels: [] }
 }
 
 function _createToys() {

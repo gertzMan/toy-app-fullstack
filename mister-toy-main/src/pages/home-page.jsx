@@ -15,6 +15,8 @@ export function HomePage() {
                     perferendis atque. Deserunt sapiente itaque soluta nihil,
                     optio quibusdam id.
                 </p>
+
+
             </div>
         </section>
     )
